@@ -1,10 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { 
-  getAuth, 
-  onAuthStateChanged, 
-  signInWithEmailAndPassword, 
-  signOut 
-} from 'firebase/auth';
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from '../FirebaseConfig';
 
 const AuthContext = createContext();
@@ -28,7 +23,8 @@ export function AuthProvider({ children }) {
       setCurrentUser(userCredential.user);
       return userCredential;
     } catch (error) {
-      throw error;
+      console.error("Login failed", error);
+      throw new Error('Login failed. Please try again.');
     }
   };
 
@@ -37,7 +33,8 @@ export function AuthProvider({ children }) {
       await signOut(auth);
       setCurrentUser(null);
     } catch (error) {
-      throw error;
+      console.error("Logout failed", error);
+      throw new Error('Logout failed. Please try again.');
     }
   };
 

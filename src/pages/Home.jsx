@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { FaPlusCircle, FaTrashAlt, FaTags, FaCalendarAlt, FaChartPie, FaFileExport, FaEdit, FaExchangeAlt, FaEnvelope, FaPhone, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import '../styles/home.css';
 import heroImage from '../assets/hero-image.png';
 import NavBar from '../components/NavBar';
@@ -25,9 +26,12 @@ const Home = () => {
             </h1>
             <p>Manage your money smarter with our simple, powerful expense tracker. No stress, just clarity.</p>
             <div className="hero-buttons">
-              <button className="btn btn-primary" onClick={() => window.location.href = 'https://chubbyrics.github.io/Expense-Tracker/#/signup'}>
-                Start Tracking
-              </button>
+              {/* Use Link component for navigation */}
+              <Link to="/signup">
+                <button className="btn btn-primary">
+                  Start Tracking
+                </button>
+              </Link>
               <button className="btn btn-outline" onClick={() => document.getElementById('how-it-works')?.scrollIntoView()}>
                 How It Works
               </button>
@@ -90,9 +94,12 @@ const Home = () => {
         <div className="container">
           <h2>Ready to take control of your finances?</h2>
           <p>Get started today and see how our expense tracker can make managing your money easier and more effective. It's time to make smarter choices with your spending.</p>
-          <button className="btn btn-primary" onClick={() => window.location.href = 'https://chubbyrics.github.io/Expense-Tracker/#/signup'}>
-            Start Tracking Now
-          </button>
+          {/* Use Link component for navigation */}
+          <Link to="/signup">
+            <button className="btn btn-primary">
+              Start Tracking Now
+            </button>
+          </Link>
         </div>
       </section>
 

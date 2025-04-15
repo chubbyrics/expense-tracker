@@ -6,7 +6,7 @@ const ProtectedRoute = ({ children }) => {
   const { currentUser, loading } = useAuth();
 
   if (loading) {
-    return <div>Loading...</div>; // Or your custom loader
+    return <div>Loading...</div>; // You can customize this with a loading spinner
   }
 
   if (!currentUser) {
