@@ -1,0 +1,103 @@
+body {
+  background-color: rgb(255, 248, 240);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Table Container Styling */
+.table-container {
+  max-height: 65vh;
+  overflow-y: auto;
+  margin-top: 20px;
+  border-radius: 8px;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Table Styling */
+.MuiTable-root {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.MuiTableCell-head {
+  font-weight: bold;
+  background-color: #66c9e7;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: #333;
+  white-space: nowrap;
+}
+
+.MuiTableCell-body {
+  vertical-align: middle;
+}
+
+/* Hover effects */
+.MuiIconButton-root {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.MuiIconButton-root:hover {
+  background-color: #46ced5;
+  transform: scale(1.1);
+}
+
+/* Zebra striping for table rows */
+.MuiTableRow-root:nth-child(odd) {
+  background-color: #c8f2ff;
+}
+
+.MuiTableRow-root:hover {
+  background-color: #6da6e7;
+}
+
+/* Dropdown styling */
+.MuiTextField-root {
+  background-color: #c8d0ff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .MuiTableCell {
+    padding: 8px 4px;
+  }
+  
+  .MuiTypography-h4 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .MuiTableCell {
+    padding: 6px 4px;
+    font-size: 0.7rem;
+  }
+  
+  .MuiTableCell-head {
+    font-size: 0.7rem;
+  }
+  
+  .MuiIconButton-root {
+    padding: 4px;
+  }
+  
+  .table-container {
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .MuiTableCell {
+    padding: 4px 2px;
+  }
+  
+  .MuiTextField-root {
+    margin-bottom: 8px;
+  }
+  
+  .MuiGrid-item {
+    padding: 0 !important;
+  }
+}
