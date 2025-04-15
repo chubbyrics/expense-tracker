@@ -1,9 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom"; // Changed BrowserRouter to HashRouter
 import { ExpenseProvider } from "./context/ExpenseContext";
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute'; // New component
-
 
 // Pages and components
 import Home from "./pages/Home";

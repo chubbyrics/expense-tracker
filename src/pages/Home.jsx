@@ -25,7 +25,7 @@ const Home = () => {
             </h1>
             <p>Manage your money smarter with our simple, powerful expense tracker. No stress, just clarity.</p>
             <div className="hero-buttons">
-              <button className="btn btn-primary" onClick={() => window.location.href = '/signup'}>
+              <button className="btn btn-primary" onClick={() => window.location.href = 'https://chubbyrics.github.io/Expense-Tracker/#/signup'}>
                 Start Tracking
               </button>
               <button className="btn btn-outline" onClick={() => document.getElementById('how-it-works')?.scrollIntoView()}>
@@ -90,7 +90,7 @@ const Home = () => {
         <div className="container">
           <h2>Ready to take control of your finances?</h2>
           <p>Get started today and see how our expense tracker can make managing your money easier and more effective. It's time to make smarter choices with your spending.</p>
-          <button className="btn btn-primary" onClick={() => window.location.href = '/signup'}>
+          <button className="btn btn-primary" onClick={() => window.location.href = 'https://chubbyrics.github.io/Expense-Tracker/#/signup'}>
             Start Tracking Now
           </button>
         </div>
